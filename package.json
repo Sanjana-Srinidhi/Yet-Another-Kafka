@@ -1,0 +1,32 @@
+{
+  "name": "yet-another-kafka",
+  "version": "1.0.0",
+  "description": "A Kafka-style publish/subscribe message broker built in Node.js, Express, and MongoDB.",
+  "main": "mini-zookeeper/index.js",
+  "scripts": {
+    "start-zookeeper": "node mini-zookeeper/index.js",
+    "start:broker1": "node broker/broker1/index.js",
+    "start:broker2": "node broker/broker2/index.js",
+    "start:broker3": "node broker/broker3/index.js",
+    "start-brokers": "concurrently \"npm run start:broker1\" \"npm run start:broker2\" \"npm run start:broker3\""
+  },
+  "keywords": [
+    "kafka",
+    "pub-sub",
+    "message-broker",
+    "distributed-systems",
+    "nodejs"
+  ],
+  "author": "Sanjana Srinidhi",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "concurrently": "^8.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.4",
+    "node-fetch": "^2.6.7",
+    "readline-sync": "^1.4.10"
+  }
+}
